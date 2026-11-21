@@ -1,0 +1,38 @@
+{
+  "name": "webgensa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:migrate": "node scripts/run-migration.js",
+    "admin:provision": "node scripts/provision-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "date-fns": "^4.4.0",
+    "es-abstract": "^1.23.0",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.77.0",
+    "motion-dom": "^14.14.0",
+    "mysql2": "^3.24.6",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/sharp": "^0.31.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,1 @@
+UPDATE admin_users SET password_hash = '$2b$12$wWfSD9om0iB7.9zZqNmzO.S.lyRBeSXuWoVzNIXHs3xjzQ6P.GBtm' WHERE email = 'gensa@admin.id';
