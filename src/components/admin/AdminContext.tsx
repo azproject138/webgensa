@@ -61,8 +61,27 @@ export function AdminProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    fetchAdmin();
-  }, [fetchAdmin]);
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await fetch("/api/auth/me", { credentials: "include" });
+        if (mounted) {
+          if (res.ok) {
+            const data = await res.json();
+            setAdmin(data.admin ?? null);
+          } else {
+            setAdmin(null);
+          }
+        }
+      } catch {
+        if (mounted) setAdmin(null);
+      } finally {
+        if (mounted) setAdminLoading(false);
+      }
+    })();
+    return () => { mounted = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const showToast = useCallback((toast: Omit<Toast, "id">) => {
     const id = Math.random().toString(36).slice(2);
