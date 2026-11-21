@@ -9,6 +9,16 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/WEBSITE-COMING_SOON-D8F05A?style=for-the-badge&labelColor=193B2D" alt="Website Coming Soon">
+</p>
+
+<p align="center">
+  <a href="https://www.gensangurejo.my.id">
+    <strong>🌐 www.gensangurejo.my.id</strong>
+  </a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js 16">
   <img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript">
   <img src="https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS">
@@ -71,19 +81,19 @@ GENSA menggunakan pendekatan visual yang menggabungkan karakter budaya lokal den
 
 ```text
 webgensa/
-├── docs/                 # Project documentation
-├── public/               # Static assets
+├── docs/
+├── public/
 ├── src/
-│   ├── app/              # Next.js App Router & pages
-│   ├── components/       # Reusable UI components
-│   ├── data/             # Static data
-│   ├── lib/              # Core utilities & configuration
-│   ├── repositories/     # Database repositories
-│   ├── services/         # Business logic
-│   ├── types/            # TypeScript definitions
-│   └── proxy.ts          # Request proxy
-├── migrations/           # Database migrations
-├── .env.example          # Environment template
+│   ├── app/
+│   ├── components/
+│   ├── data/
+│   ├── lib/
+│   ├── repositories/
+│   ├── services/
+│   ├── types/
+│   └── proxy.ts
+├── migrations/
+├── .env.example
 ├── next.config.ts
 ├── package.json
 └── README.md
@@ -115,8 +125,6 @@ npm install
 
 ### 3. Environment Configuration
 
-Salin file environment:
-
 ```bash
 cp .env.example .env
 ```
@@ -129,8 +137,6 @@ Sesuaikan konfigurasi database dan environment variables berdasarkan dokumentasi
 
 Pastikan MySQL berjalan, database sudah dibuat, dan konfigurasi koneksi sudah benar.
 
-Jalankan migration menggunakan script yang tersedia di project:
-
 ```bash
 npm run db:migrate
 ```
@@ -141,17 +147,11 @@ npm run db:migrate
 npm run dev
 ```
 
-Buka browser:
-
-```text
-http://localhost:3000
-```
+Buka `http://localhost:3000`.
 
 ## 🔐 Admin Dashboard
 
 GENSA dilengkapi dashboard administrator untuk mengelola konten website.
-
-Fitur pengelolaan meliputi:
 
 - Website content
 - Programs & activities
@@ -161,23 +161,17 @@ Fitur pengelolaan meliputi:
 - Website settings
 - Administrator profile
 
-Akses dashboard melalui:
-
-```text
-/admin/login
-```
+Akses dashboard melalui `/admin/login`.
 
 Akun administrator harus disiapkan melalui proses provisioning yang dijelaskan dalam dokumentasi project.
 
 ## 🛡️ Security & Documentation
 
-Project ini menerapkan beberapa mekanisme keamanan:
-
 - Password hashing menggunakan bcrypt.
 - Session berbasis cookie HttpOnly.
 - Validasi data menggunakan Zod.
 - Proteksi akses halaman administrator.
-- Penggunaan environment variables untuk konfigurasi sensitif.
+- Environment variables untuk konfigurasi sensitif.
 - Validasi file media yang diunggah.
 
 Dokumentasi teknis tersedia di folder `docs/`.
